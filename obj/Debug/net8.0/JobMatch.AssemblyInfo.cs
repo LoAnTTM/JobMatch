@@ -11,11 +11,11 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-FPTJobMatchProject-42d8c130-4435-4ee4-90fd-b48e29b7df22")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-JobMatchProject-2d335765-fdb3-4cd1-8a32-0d64e0bad7d6")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("JobMatch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9f45a43d253a5772ce4794b3e3d5cc6fd15c07e")]
 [assembly: System.Reflection.AssemblyProductAttribute("JobMatch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JobMatch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

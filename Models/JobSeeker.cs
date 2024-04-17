@@ -10,7 +10,7 @@ namespace JobMatch
         
         [Required(ErrorMessage = "User ID is required")]
         public string? UserId { get; set; }
-        
+        [Display(Name = "Full Name")]
         public string? Name { get; set; }
         
         public string? Education { get; set; }
@@ -18,7 +18,7 @@ namespace JobMatch
         [EmailAddress(ErrorMessage = "Invalid email address")]
         public string? Email { get; set; }
         
-        [Phone(ErrorMessage = "Invalid phone number")]
+        [Display(Name = "Phone Number")]
         public string? Phone { get; set; }
         
         public string? Resume { get; set; }

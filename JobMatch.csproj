@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-FPTJobMatchProject-42d8c130-4435-4ee4-90fd-b48e29b7df22</UserSecretsId>
+    <UserSecretsId>aspnet-JobMatchProject-2d335765-fdb3-4cd1-8a32-0d64e0bad7d6</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
