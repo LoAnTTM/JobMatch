@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using JobMatch;
 using JobMatch.Data;
 
 namespace JobMatch.Controllers
 {
+    [Authorize(Roles = "Admin,Employer")]
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -46,18 +48,18 @@ namespace JobMatch.Controllers
         // GET: Category/Create
         public IActionResult Create()
         {
+            // var cateStatus = Enum.GetValues(typeof(CategoryStatus));
             return View();
         }
 
         // POST: Category/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Description,Status")] JobCategory jobCategory)
         {
             if (ModelState.IsValid)
             {
+                jobCategory.Status = CategoryStatus.Pending;
                 _context.Add(jobCategory);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -82,8 +84,6 @@ namespace JobMatch.Controllers
         }
 
         // POST: Category/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Status")] JobCategory jobCategory)

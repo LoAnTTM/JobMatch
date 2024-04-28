@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using JobMatch.Data;
 
 namespace JobMatch.Areas.Identity.Pages.Account
 {
@@ -21,11 +22,13 @@ namespace JobMatch.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly ApplicationDbContext _db;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, ApplicationDbContext db)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _db = db;
         }
 
         /// <summary>
@@ -115,6 +118,16 @@ namespace JobMatch.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+                    var user = _db.ApplicationUsers.Where(u => u.Email == Input.Email).FirstOrDefault();
+                    // Employer121111@
+                    Console.WriteLine("User: " + user.password_reset_token);
+                    var reset_url = user.password_reset_token;
+                    if (reset_url != null) {
+                        Console.WriteLine("User goto url: " + user.password_reset_token);
+                        user.password_reset_token = null;
+                        _db.SaveChanges();
+                        return Redirect(reset_url);
+                    }
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

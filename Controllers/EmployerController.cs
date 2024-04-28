@@ -7,16 +7,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using JobMatch;
 using JobMatch.Data;
+using Microsoft.AspNetCore.Identity;
+using System.Text.Encodings.Web;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
 
 namespace JobMatch.Controllers
 {
     public class EmployerController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public EmployerController(ApplicationDbContext context)
+        public EmployerController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Employer
@@ -132,6 +138,32 @@ namespace JobMatch.Controllers
             }
 
             return View(employer);
+        }
+
+        public async Task<IActionResult> ResetPassword(string? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = _context.ApplicationUsers.Where(u => u.Email == id).FirstOrDefault();
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            var callbackUrl = Url.Page(
+                "/Account/ResetPassword",
+                pageHandler: null,
+                values: new { area = "Identity", code },
+                protocol: Request.Scheme);
+
+            user.password_reset_token = HtmlEncoder.Default.Encode(callbackUrl);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: Employer/Delete/5

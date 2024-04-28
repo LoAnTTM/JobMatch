@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using JobMatch.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -21,10 +22,13 @@ namespace JobMatch.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IEmailSender _emailSender;
 
-        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender)
+        private readonly ApplicationDbContext _db;
+
+        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender, ApplicationDbContext db)
         {
             _userManager = userManager;
             _emailSender = emailSender;
+            _db = db;
         }
 
         /// <summary>
@@ -53,15 +57,13 @@ namespace JobMatch.Areas.Identity.Pages.Account
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByEmailAsync(Input.Email);
-                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+                // var user = await _userManager.FindByEmailAsync(Input.Email);
+                var user = _db.ApplicationUsers.Where(u => u.Email == Input.Email).FirstOrDefault();
+                if (user == null)
                 {
                     // Don't reveal that the user does not exist or is not confirmed
                     return RedirectToPage("./ForgotPasswordConfirmation");
                 }
-
-                // For more information on how to enable account confirmation and password reset please
-                // visit https://go.microsoft.com/fwlink/?LinkID=532713
                 var code = await _userManager.GeneratePasswordResetTokenAsync(user);
                 code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                 var callbackUrl = Url.Page(
@@ -70,11 +72,17 @@ namespace JobMatch.Areas.Identity.Pages.Account
                     values: new { area = "Identity", code },
                     protocol: Request.Scheme);
 
-                await _emailSender.SendEmailAsync(
-                    Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                // await _emailSender.SendEmailAsync(
+                //     Input.Email,
+                //     "Reset Password",
+                //     $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                // user.password_reset_token = HtmlEncoder.Default.Encode(callbackUrl);
+                // var user = _db.ApplicationUsers.Where(u => u.Email == Input.Email).FirstOrDefault();
+                user.password_reset_token = HtmlEncoder.Default.Encode(callbackUrl);
+                _db.SaveChanges();
 
+Console.WriteLine("TEST");
+Console.WriteLine($"Email sent to {Input.Email} with callback url {HtmlEncoder.Default.Encode(callbackUrl)}");
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }
 

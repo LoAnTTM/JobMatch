@@ -10,6 +10,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using JobMatch.Data;
 using JobMatch.Models;
 using JobMatch;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using System.Threading.Tasks;
+
 
 namespace JobMatch.Areas.Identity.Pages.Account.Manage
 {
@@ -19,21 +23,18 @@ namespace JobMatch.Areas.Identity.Pages.Account.Manage
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ApplicationDbContext _context;
-        private readonly IWebHostEnvironment _hostEnvironment;
 
 
         public IndexModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             RoleManager<IdentityRole> roleManager,
-            ApplicationDbContext context,
-            IWebHostEnvironment hostEnvironment)
+            ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _context = context;
-            _hostEnvironment = hostEnvironment;
         }
         public string Username { get; set; }
         [TempData]
@@ -45,7 +46,6 @@ namespace JobMatch.Areas.Identity.Pages.Account.Manage
         {
             public JobSeeker JobSeeker { get; set; }
             public Employer Employer { get; set; }
-            public IFormFile Resume { get; set; }
             public string PhoneNumber { get; set; }
         }
 
@@ -93,7 +93,7 @@ namespace JobMatch.Areas.Identity.Pages.Account.Manage
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            
             var setResult = 0;
 
             // Update JobSeeker details
@@ -109,7 +109,6 @@ namespace JobMatch.Areas.Identity.Pages.Account.Manage
                 jobSeeker.Education = Input.JobSeeker.Education;
                 jobSeeker.Email = user.UserName;
                 jobSeeker.Phone = Input.JobSeeker.Phone;
-                jobSeeker.Resume = Input.JobSeeker.Resume;
                 setResult = await _context.SaveChangesAsync();
             }
             // Update Employer detail
@@ -130,35 +129,21 @@ namespace JobMatch.Areas.Identity.Pages.Account.Manage
                 setResult = await _context.SaveChangesAsync();
             }
 
-            // Handle the uploaded file
-            var file = Input.Resume;
-            if (file != null && file.Length > 0)
-            {
-                // Generate a unique file name
-                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                // Define the path to the directory where you want to save the files
-                string resumePath = Path.Combine(_hostEnvironment.WebRootPath, "img", "SeekerResume");
-                // Create the directory if it doesn't exist
-                if (!Directory.Exists(resumePath))
-                {
-                    Directory.CreateDirectory(resumePath);
-                }
-                // Define the path to the file
-                string filePath = Path.Combine(resumePath, fileName);
-                // Save the file to the directory
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    file.CopyTo(fileStream);
-                }
-                // Store the path to the file in the JobSeeker model
-                Input.JobSeeker.Resume = @"img\SeekerResume\" + fileName;
-            }
-
             // Update the phone number
+            // if (Input.PhoneNumber != phoneNumber)
+            // {
+            //     Input.PhoneNumber = user.PhoneNumber;
+            //     setResult = await _context.SaveChangesAsync();
+            // }
+            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
             if (Input.PhoneNumber != phoneNumber)
             {
-                Input.PhoneNumber = user.PhoneNumber;
-                setResult = await _context.SaveChangesAsync();
+                var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
+                if (!setPhoneResult.Succeeded)
+                {
+                    StatusMessage = "Unexpected error when trying to set phone number.";
+                    return RedirectToPage();
+                }
             }
 
             await _signInManager.RefreshSignInAsync(user);

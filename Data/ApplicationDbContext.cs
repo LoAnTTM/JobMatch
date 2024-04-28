@@ -16,6 +16,7 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     public DbSet<JobSeeker> JobSeekers { get; set; }
     public DbSet<JobApplication> JobApplications { get; set; }
     public DbSet<JobCategory> JobCategories { get; set; }
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -6,7 +6,6 @@ namespace JobMatch
 {
     public enum JobStatus
     {
-       Expired,
        Active,
        Closed
     }

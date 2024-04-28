@@ -7,16 +7,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using JobMatch;
 using JobMatch.Data;
+using Microsoft.AspNetCore.Identity;
+using System.Text.Encodings.Web;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
 
 namespace JobMatch.Controllers
 {
     public class JobSeekerController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public JobSeekerController(ApplicationDbContext context)
+        public JobSeekerController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: JobSeeker
@@ -49,9 +55,6 @@ namespace JobMatch.Controllers
             return View();
         }
 
-        // POST: JobSeeker/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,UserId,Name,Education,Email,Phone,Resume")] JobSeeker jobSeeker)
@@ -81,9 +84,6 @@ namespace JobMatch.Controllers
             return View(jobSeeker);
         }
 
-        // POST: JobSeeker/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,Name,Education,Email,Phone,Resume")] JobSeeker jobSeeker)
@@ -132,6 +132,32 @@ namespace JobMatch.Controllers
             }
 
             return View(jobSeeker);
+        }
+
+        public async Task<IActionResult> ResetPassword(string? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = _context.ApplicationUsers.Where(u => u.Email == id).FirstOrDefault();
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            var callbackUrl = Url.Page(
+                "/Account/ResetPassword",
+                pageHandler: null,
+                values: new { area = "Identity", code },
+                protocol: Request.Scheme);
+
+            user.password_reset_token = HtmlEncoder.Default.Encode(callbackUrl);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: JobSeeker/Delete/5

@@ -11,15 +11,13 @@ namespace JobMatch
         Denied
     }
     
-    public class JobApplication
+    public class JobApplication 
     {
         [Key]
         public int Id { get; set; }
         
-        [Required(ErrorMessage = "Job ID is required")]
         public int JobId { get; set; }
         
-        [Required(ErrorMessage = "Job seeker ID is required")]
         public int JobSeekerId { get; set; }
         
         [Display(Name = "Applied Date")]
@@ -27,6 +25,8 @@ namespace JobMatch
         public DateTime AppliedDate { get; set; }
         
         public ApplicationStatus Status { get; set; }
+
+        public string? Resume { get; set; }
         
         [ForeignKey("JobId")]
         public virtual Job? Job { get; set; }

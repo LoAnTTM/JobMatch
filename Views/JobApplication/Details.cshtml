@@ -10,6 +10,18 @@
     <h4>JobApplication</h4>
     <hr />
     <dl class="row">
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Job)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Job.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobSeeker)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobSeeker.Name)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.AppliedDate)
         </dt>
@@ -22,21 +34,44 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Status)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Job)
+        <dt class="col-sm-2">
+            View Resume
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Job.Id)
+        <dd class="col-sm-10">
+            @if (Model.Resume != null)
+            {
+                <a asp-action="ViewResume" asp-route-resume="@Model.Resume">View Resume</a>
+            }
+            else
+            {
+                <text>No Resume</text>
+            }
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.JobSeeker)
+        <dt class="col-sm-2">
+            Download Resume
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.JobSeeker.UserId)
+        <dd class="col-sm-10">
+            @* <a href="@Url.Action("Download", new { id = item.Id })">Download Resume</a> *@
+            @if (Model.Resume != null)
+            {
+                <a asp-action="Download" asp-route-id="@Model.Id">Download Resume</a>
+            }
+            else
+            {
+                <text>No Resume</text>
+            }
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    @if(User.IsInRole("Job Seeker"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> 
+    }
+    @if(User.IsInRole("Employer"))
+    {  
+        <a asp-action="Accept" asp-route-id="@Model?.Id">Accept</a> 
+        <a asp-action="Decline" asp-route-id="@Model?.Id">Decline</a> 
+    }
     <a asp-action="Index">Back to List</a>
 </div>

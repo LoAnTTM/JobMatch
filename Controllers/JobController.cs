@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+
+
 using JobMatch;
 using JobMatch.Data;
 
@@ -13,10 +17,12 @@ namespace JobMatch.Controllers
     public class JobController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public JobController(ApplicationDbContext context)
+        public JobController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Job
@@ -49,28 +55,52 @@ namespace JobMatch.Controllers
         // GET: Job/Create
         public IActionResult Create()
         {
-            ViewData["EmployerId"] = new SelectList(_context.Employers, "Id", "Address");
-            ViewData["JobCategoryId"] = new SelectList(_context.JobCategories, "Id", "Id");
+            // var userId = _userManager.GetUserAsync(User);
+            var userId = _userManager.GetUserId(User);
+            var employer = _context.Employers.FirstOrDefault(j => j.UserId == userId);
+            // ViewData["EmployerId"] = new SelectList(employer, "Id", "Name");
+            ViewData["EmployerName"] = employer.Name;
+            ViewData["Location"] = employer.Address;
+            // Get only active categories
+            var activeCategories = _context.JobCategories
+                .Where(c => c.Status == CategoryStatus.Active)
+                .ToList();
+            ViewData["JobCategoryId"] = new SelectList(activeCategories, "Id", "Name");
             return View();
         }
 
-        // POST: Job/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,JobCategoryId,EmployerId,Location,Salary,Description,Deadline,Status")] Job job)
         {
             if (ModelState.IsValid)
             {
+                var userId = _userManager.GetUserId(User);
+                var employer = _context.Employers.Where(j => j.UserId == userId).FirstOrDefault();
+                if (employer == null)
+                {
+                    return View(job);
+                }
+                job.EmployerId = employer.Id;
+                job.Location = employer.Address;
+                job.Status = JobStatus.Active;   
+
                 _context.Add(job);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmployerId"] = new SelectList(_context.Employers, "Id", "Address", job.EmployerId);
-            ViewData["JobCategoryId"] = new SelectList(_context.JobCategories, "Id", "Id", job.JobCategoryId);
+            
+            // If ModelState is not valid, repopulate ViewData for the form
+            ViewData["Name"] = _context.Employers.FirstOrDefault().Name;
+            ViewData["Location"] = _context.Employers.FirstOrDefault().Address;
+            ViewData["JobCategoryId"] = new SelectList(await _context.JobCategories
+                .Where(c => c.Status == CategoryStatus.Active)
+                .ToListAsync(), "Id", "Name", job.JobCategoryId);
             return View(job);
         }
+
+
 
         // GET: Job/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -91,8 +121,6 @@ namespace JobMatch.Controllers
         }
 
         // POST: Job/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,JobCategoryId,EmployerId,Location,Salary,Description,Deadline,Status")] Job job)
@@ -147,6 +175,16 @@ namespace JobMatch.Controllers
             return View(job); 
         }
 
+        public async Task<IActionResult> ApplyJob(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            return RedirectToAction("Create", "JobApplication");
+        }
+
         // POST: Job/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -169,11 +207,5 @@ namespace JobMatch.Controllers
     }
 }
 
-
-
-
-
-// var  claimIdentity = (ClaimsIdentity) User.Identity;
-// var userId = claimIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
 
 
