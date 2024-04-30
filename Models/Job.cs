@@ -14,7 +14,9 @@ namespace JobMatch
         [Key]
         public int Id { get; set; }
         public string? Title { get; set; }
+        [Display(Name = "Job Category")]
         public int JobCategoryId { get; set; }
+        [Display(Name = "Employer name")]
         public int EmployerId { get; set; }
         public string? Location { get; set; }
         public string? Salary { get; set; }

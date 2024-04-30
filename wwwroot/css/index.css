@@ -1,0 +1,73 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Index Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+}
+
+.table td {
+    background-color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.table a:hover {
+    color: #0056b3;
+}
+
+/* Action Buttons */
+.action-btn {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-btn.edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.action-btn.delete {
+    background-color: #dc3545;
+    color: #fff;
+}

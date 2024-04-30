@@ -10,10 +10,12 @@ using JobMatch.Data;
 using Microsoft.AspNetCore.Identity;
 using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.AspNetCore.Authorization;
 using System.Text;
 
 namespace JobMatch.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class EmployerController : Controller
     {
         private readonly ApplicationDbContext _context;

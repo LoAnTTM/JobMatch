@@ -32,6 +32,18 @@ namespace JobMatch.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
+        //GET: Job/MyJobs
+        public async Task<IActionResult> MyJobs()
+        {
+            //As this employer, get all jobs created by this employer
+            var userId = _userManager.GetUserId(User); 
+            var jobs = _context.Jobs
+                .Include(j => j.Employer)
+                .Include(j => j.JobCategory)
+                .Where(j => j.Employer.UserId == userId);
+            return View("Jobs", await jobs.ToListAsync());
+        }
+
         // GET: Job/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -52,7 +64,7 @@ namespace JobMatch.Controllers
             return View(job);
         }
 
-        // GET: Job/Create
+        // GET: Job/Create/
         public IActionResult Create()
         {
             // var userId = _userManager.GetUserAsync(User);
@@ -115,8 +127,10 @@ namespace JobMatch.Controllers
             {
                 return NotFound();
             }
-            ViewData["EmployerId"] = new SelectList(_context.Employers, "Id", "Address", job.EmployerId);
-            ViewData["JobCategoryId"] = new SelectList(_context.JobCategories, "Id", "Id", job.JobCategoryId);
+            ViewData["EmployerId"] = new SelectList(_context.Employers, "Id", "Name", job.EmployerId);
+            ViewData["JobCategoryId"] = new SelectList(await _context.JobCategories
+                .Where(c => c.Status == CategoryStatus.Active)
+                .ToListAsync(), "Id", "Name", job.JobCategoryId);
             return View(job);
         }
 
@@ -137,6 +151,7 @@ namespace JobMatch.Controllers
                     _context.Update(job);
                     await _context.SaveChangesAsync();
                 }
+                
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!JobExists(job.Id))
@@ -150,8 +165,10 @@ namespace JobMatch.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmployerId"] = new SelectList(_context.Employers, "Id", "Address", job.EmployerId);
-            ViewData["JobCategoryId"] = new SelectList(_context.JobCategories, "Id", "Id", job.JobCategoryId);
+            ViewData["EmployerId"] = new SelectList(_context.Employers, "Id", "Name", job.EmployerId);
+            ViewData["JobCategoryId"] = new SelectList(await _context.JobCategories
+                .Where(c => c.Status == CategoryStatus.Active)
+                .ToListAsync(), "Id", "Name", job.JobCategoryId);
             return View(job);
         }
 
@@ -174,7 +191,7 @@ namespace JobMatch.Controllers
 
             return View(job); 
         }
-
+        [Authorize(Roles = "Job Seeker")]
         public async Task<IActionResult> ApplyJob(int? id)
         {
             if (id == null)

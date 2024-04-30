@@ -288,3 +288,4 @@
 /Users/loantruong/Documents/A/JobMatch/obj/Debug/net8.0/JobMatch.pdb
 /Users/loantruong/Documents/A/JobMatch/obj/Debug/net8.0/JobMatch.genruntimeconfig.cache
 /Users/loantruong/Documents/A/JobMatch/obj/Debug/net8.0/ref/JobMatch.dll
+/Users/loantruong/Documents/A/JobMatch/obj/Debug/net8.0/JobMatch.sourcelink.json

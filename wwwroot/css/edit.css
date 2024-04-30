@@ -1,0 +1,87 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Edit Form Styles */
+.edit-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.edit-container h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.edit-container hr {
+    margin-bottom: 20px;
+}
+
+.edit-container .row {
+    margin-bottom: 20px;
+}
+
+.edit-container .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.edit-container label {
+    font-weight: bold;
+}
+
+.edit-container input[type="text"],
+.edit-container input[type="email"],
+.edit-container input[type="tel"],
+.edit-container input[type="file"],
+.edit-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-container input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.edit-container .text-danger {
+    color: #dc3545;
+}
+
+.edit-container .form-group {
+    margin-bottom: 20px;
+}

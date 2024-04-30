@@ -1,0 +1,74 @@
+    Reset CSS
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Global Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Form Styles */
+    .delete-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .delete-form h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .delete-form h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .delete-form .row {
+        margin-bottom: 20px;
+    }
+
+    .delete-form .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .delete-form dt {
+        float: left;
+        width: 30%;
+        font-weight: bold;
+    }
+
+    .delete-form dd {
+        float: left;
+        width: 70%;
+    }
+
+    .delete-form input[type="submit"],
+    .delete-form a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #dc3545;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .delete-form input[type="submit"]:hover,
+    .delete-form a:hover {
+        background-color: #c82333;
+    }

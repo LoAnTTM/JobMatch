@@ -1,0 +1,75 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Details Styles */
+.details-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.details-container h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.details-container hr {
+    margin-bottom: 20px;
+}
+
+.details-container .row {
+    margin-bottom: 20px;
+}
+
+.details-container .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.details-container dt {
+    float: left;
+    width: 30%;
+    font-weight: bold;
+}
+
+.details-container dd {
+    float: left;
+    width: 70%;
+}
+
+.details-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details-container a:hover {
+    background-color: #0056b3;
+}

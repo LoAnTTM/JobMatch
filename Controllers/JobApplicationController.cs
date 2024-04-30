@@ -241,6 +241,17 @@ namespace JobMatch.Controllers
             var jobApplication = await _context.JobApplications.FindAsync(id);
             if (jobApplication != null)
             {
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if (!string.IsNullOrEmpty(jobApplication.Resume))
+                {
+                    string oldResumePath = Path.Combine(wwwRootPath, "pdf/Resume", jobApplication.Resume);
+                    // Console.WriteLine("Old resume path: " + oldResumePath);
+                    FileInfo fileInfo = new FileInfo(oldResumePath);
+                    if (fileInfo.Exists)
+                    {
+                        fileInfo.Delete();
+                    }
+                }
                 _context.JobApplications.Remove(jobApplication);
             }
 

@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets/JobMatch.bundle.scp.css"
     },
     {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/css/create.css",
+      "PackagePath": "staticwebassets/css/create.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/css/delete.css",
+      "PackagePath": "staticwebassets/css/delete.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/css/details.css",
+      "PackagePath": "staticwebassets/css/details.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/css/edit.css",
+      "PackagePath": "staticwebassets/css/edit.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/css/index.css",
+      "PackagePath": "staticwebassets/css/index.css"
+    },
+    {
       "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
@@ -267,6 +287,10 @@
     {
       "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/b1838559-46c9-49a0-9f5a-db7e1acc2467.pdf",
       "PackagePath": "staticwebassets/pdf/Resume/b1838559-46c9-49a0-9f5a-db7e1acc2467.pdf"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/b7962b50-c3b6-4897-8505-9d296a8edde0.pdf",
+      "PackagePath": "staticwebassets/pdf/Resume/b7962b50-c3b6-4897-8505-9d296a8edde0.pdf"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.JobMatch.Microsoft.AspNetCore.StaticWebAssets.props",

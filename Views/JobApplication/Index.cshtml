@@ -3,12 +3,22 @@
 @{
     ViewData["Title"] = "Index";
 }
+@if (User.IsInRole("Job Seeker"))
+{
+    <h1>My Applications</h1>
+} else if (User.IsInRole("Employer"))
+{
+    <h1>Job Applications</h1>
+}
+else if (User.IsInRole("Admin"))
+{
+    <h1>Applications</h1>
+}
 
-<h1>Index</h1>
 
-<p>
+@* <p>
     <a asp-action="Create">Create New</a>
-</p>
+</p> *@
 <table class="table">
     <thead>
         <tr>
@@ -57,11 +67,26 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <form asp-controller="JobApplication" asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Are you sure you want to delete for this application?')">
-                    <input type="submit" value="Delete" />
-                </form> 
+                @if (User.IsInRole("Admin"))
+                {
+                    @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>  *@
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                    <form asp-controller="JobApplication" asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Are you sure you want to delete for this application?')">
+                        <input type="submit" value="Delete" />
+                    </form>
+                }else if (User.IsInRole("Job Seeker"))
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <form asp-controller="JobApplication" asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Are you sure you want to delete for this application?')">
+                        <input type="submit" value="Delete" />
+                    </form>
+                }else if (User.IsInRole("Employer"))
+                {
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a asp-action="Accept" asp-route-id="@item?.Id">Accept</a> 
+                    <a asp-action="Decline" asp-route-id="@item?.Id">Decline</a>  
+                }
             </td>
         </tr>
 }
