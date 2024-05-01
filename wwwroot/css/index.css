@@ -1,73 +1,112 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1 {
+    font-family: Georgia;
+    margin-bottom: 0;
 }
 
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Index Table Styles */
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.table th,
-.table td {
-    padding: 10px;
-    border: 1px solid #dee2e6;
-}
-
-.table th {
-    background-color: #007bff;
-    color: #fff;
+table {
+    color: #fffefe;
+    font-family: Georgia;
+    font-size: 14px;
     text-align: left;
+    border-radius: 10px;    
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.table td {
+table thead {
+    background-color: #f2f2f2;
+}
+table th {
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+table td {
     background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 10px;
 }
 
-.table tbody tr:nth-child(even) {
-    background-color: #f8f9fa;
+
+table tr:nth-child(even) td {
+    background-color: #f2f2f2;
 }
 
-.table a {
+
+.create-button a {
+    float: right;
     text-decoration: none;
-    color: #007bff;
-}
-
-.table a:hover {
-    color: #0056b3;
-}
-
-/* Action Buttons */
-.action-btn {
-    margin-right: 10px;
-    padding: 5px 10px;
-    border: none;
+    margin: 15px 10px; /* Điều chỉnh khoảng cách giữa nút Create New và các nút khác */
+    background-color: #d8ebff;
+    color: #000000;
+    padding: 8px 12px;
     border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: Georgia;
+}
+
+.create-button a:hover {
+    background-color: #8dc0f6;
+}
+
+.apply-button ,
+.edit-button ,
+.details-button,
+.delete-button {
+    background-color: transparent;
+    border: none;
+    margin: 3px;
+    border-radius: 5px; 
     cursor: pointer;
 }
 
-.action-btn.edit {
-    background-color: #28a745;
-    color: #fff;
+.edit-button:hover {
+    background-color: #faf086;
+    cursor: pointer;
 }
 
-.action-btn.delete {
-    background-color: #dc3545;
-    color: #fff;
+.details-button:hover {
+    background-color: #90ffa5;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: rgb(255, 154, 154);
+    cursor: pointer;
+}
+
+.apply-button:hover {
+    background-color: rgb(255, 154, 223);
+    cursor: pointer;
+}
+
+.edit-button {
+    padding: 5px 18.5px;
+    background-color: rgb(245, 245, 208);
+}
+
+.details-button {
+    padding: 5px 10px;
+    background-color: rgb(211, 250, 206);
+}
+
+.delete-button {
+    padding: 5px 12px;
+    background-color: rgb(252, 218, 218);
+}
+
+.apply-button {
+    padding: 5px 13px;
+    background-color: rgb(252, 218, 243);
 }

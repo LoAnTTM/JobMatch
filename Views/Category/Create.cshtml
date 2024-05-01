@@ -1,12 +1,9 @@
 @model JobMatch.JobCategory
-
 @{
     ViewData["Title"] = "Create";
     <link rel="stylesheet" href="~/css/create.css" />
 }
-
 <h1>Create</h1>
-
 <h4>JobCategory</h4>
 <hr />
 <div class="row">
@@ -38,14 +35,12 @@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            <div asp-action="Index">
+                <button type="submit" class="btn btn-secondary">Back to List</button>
+            </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

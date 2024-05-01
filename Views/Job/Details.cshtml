@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Details";
+    <link rel = "stylesheet" href = "~/css/details.css" />
 }
 
 <h1>Details</h1>
@@ -66,20 +67,22 @@
 {
     <div>
         <a asp-action="ApplyJob" asp-route-id="@Model?.Id">Apply</a> |
-        <a asp-action="Index">Back to List</a>
+        <a class="btn btn-secondary" asp-action="Index">Back to List</a>
     </div>
 }
 else if(User.IsInRole("Employer")||User.IsInRole("Admin"))
 {
     <div>
-        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-        <a asp-action="Index">Back to List</a>
+        <a class="action-links" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    </div>
+    <div>
+        <a class="btn btn-secondary" asp-action="Index">Back to List</a>
     </div>
 }
 else
 {
     <div>
-        <a asp-action="Index">Back to List</a>
+        <a class="btn btn-secondary" asp-action="Index">Back to List</a>
     </div>
 }
 @* <div>

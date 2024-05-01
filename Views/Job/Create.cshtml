@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Create";
+    <link rel="stylesheet" href="~/css/create.css" />
 }
 
 <h1>Create</h1>
@@ -51,15 +52,14 @@
                 <select asp-for="Status" class="form-control"></select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div> *@
-            <div class="form-group">
+             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <div asp-action="Index">
+                <button type="submit" class="btn btn-secondary">Back to List</button>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

@@ -1,87 +1,54 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+h1 {
+    font-family: Georgia;
 
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
 }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Edit Form Styles */
-.edit-container {
-    background-color: #fff;
+.edit-form {
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    font-family: Georgia;
 }
 
-.edit-container h1 {
-    font-size: 24px;
+.edit-form,
+.form-group {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.edit-container h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.edit-container hr {
-    margin-bottom: 20px;
-}
-
-.edit-container .row {
-    margin-bottom: 20px;
-}
-
-.edit-container .row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.edit-container label {
+.edit-form label {
     font-weight: bold;
 }
 
-.edit-container input[type="text"],
-.edit-container input[type="email"],
-.edit-container input[type="tel"],
-.edit-container input[type="file"],
-.edit-container select {
+.edit-form input[type="text"],
+.edit-form select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    padding: 5px 18.5px;
+    background-color: rgb(251, 251, 178);
+    border: none;
+    color: #000000;
     border-radius: 5px;
 }
 
-.edit-container input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #007bff;
+.btn-primary:hover {
+    background-color: #faf086;
+    color: #000000; 
+}
+
+.btn-secondary {
+    background-color: #6c757d;
     color: #fff;
     border: none;
+    padding: 5px 18.5px;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-.edit-container input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-.edit-container .text-danger {
-    color: #dc3545;
-}
-
-.edit-container .form-group {
-    margin-bottom: 20px;
+.btn-secondary:hover {
+    background-color: #495057;
 }

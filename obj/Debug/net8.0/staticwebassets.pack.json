@@ -25,12 +25,60 @@
       "PackagePath": "staticwebassets/css/index.css"
     },
     {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/css/indexhome.css",
+      "PackagePath": "staticwebassets/css/indexhome.css"
+    },
+    {
       "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/clients/client-1.png",
+      "PackagePath": "staticwebassets/img/clients/client-1.png"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/clients/client-2.png",
+      "PackagePath": "staticwebassets/img/clients/client-2.png"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/clients/client-3.png",
+      "PackagePath": "staticwebassets/img/clients/client-3.png"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/clients/client-4.png",
+      "PackagePath": "staticwebassets/img/clients/client-4.png"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/clients/client-5.png",
+      "PackagePath": "staticwebassets/img/clients/client-5.png"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/clients/client-6.png",
+      "PackagePath": "staticwebassets/img/clients/client-6.png"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/hero-bg.jpg",
+      "PackagePath": "staticwebassets/img/hero-bg.jpg"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/logo.png",
+      "PackagePath": "staticwebassets/img/logo.png"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/map.jpg",
+      "PackagePath": "staticwebassets/img/map.jpg"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/img/service.jpg",
+      "PackagePath": "staticwebassets/img/service.jpg"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/js/main.js",
+      "PackagePath": "staticwebassets/js/main.js"
     },
     {
       "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/js/site.js",
@@ -265,32 +313,344 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/08547eb5-ff5a-4872-ab26-85c822e29c61.pdf",
-      "PackagePath": "staticwebassets/pdf/Resume/08547eb5-ff5a-4872-ab26-85c822e29c61.pdf"
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/d2efbc99-39dd-402f-a694-147ba1a5211e.pdf",
+      "PackagePath": "staticwebassets/pdf/Resume/d2efbc99-39dd-402f-a694-147ba1a5211e.pdf"
     },
     {
-      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/11f6e782-5b16-46f6-a84b-3a753a6c6db1.pdf",
-      "PackagePath": "staticwebassets/pdf/Resume/11f6e782-5b16-46f6-a84b-3a753a6c6db1.pdf"
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/aos/aos.cjs.js",
+      "PackagePath": "staticwebassets/vendor/aos/aos.cjs.js"
     },
     {
-      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/472b1c0b-4612-4eb4-8bbd-d4e66927c1c2.pdf",
-      "PackagePath": "staticwebassets/pdf/Resume/472b1c0b-4612-4eb4-8bbd-d4e66927c1c2.pdf"
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/aos/aos.css",
+      "PackagePath": "staticwebassets/vendor/aos/aos.css"
     },
     {
-      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/640d726f-c6c3-4263-9a49-9ad449b0c8e8.pdf",
-      "PackagePath": "staticwebassets/pdf/Resume/640d726f-c6c3-4263-9a49-9ad449b0c8e8.pdf"
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/aos/aos.esm.js",
+      "PackagePath": "staticwebassets/vendor/aos/aos.esm.js"
     },
     {
-      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/7f439922-5835-473d-9f5b-de6aaf03ded4.pdf",
-      "PackagePath": "staticwebassets/pdf/Resume/7f439922-5835-473d-9f5b-de6aaf03ded4.pdf"
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/aos/aos.js",
+      "PackagePath": "staticwebassets/vendor/aos/aos.js"
     },
     {
-      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/b1838559-46c9-49a0-9f5a-db7e1acc2467.pdf",
-      "PackagePath": "staticwebassets/pdf/Resume/b1838559-46c9-49a0-9f5a-db7e1acc2467.pdf"
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/aos/aos.js.map",
+      "PackagePath": "staticwebassets/vendor/aos/aos.js.map"
     },
     {
-      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/pdf/Resume/b7962b50-c3b6-4897-8505-9d296a8edde0.pdf",
-      "PackagePath": "staticwebassets/pdf/Resume/b7962b50-c3b6-4897-8505-9d296a8edde0.pdf"
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap-icons/bootstrap-icons.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap-icons/bootstrap-icons.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap-icons/bootstrap-icons.json",
+      "PackagePath": "staticwebassets/vendor/bootstrap-icons/bootstrap-icons.json"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap-icons/bootstrap-icons.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap-icons/bootstrap-icons.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap-icons/bootstrap-icons.scss",
+      "PackagePath": "staticwebassets/vendor/bootstrap-icons/bootstrap-icons.scss"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap-icons/fonts/bootstrap-icons.woff",
+      "PackagePath": "staticwebassets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid(1).css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid(1).css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.js",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/bootstrap/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/vendor/bootstrap/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/css/animations.css",
+      "PackagePath": "staticwebassets/vendor/boxicons/css/animations.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/css/boxicons.css",
+      "PackagePath": "staticwebassets/vendor/boxicons/css/boxicons.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/css/boxicons.min.css",
+      "PackagePath": "staticwebassets/vendor/boxicons/css/boxicons.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/css/transformations.css",
+      "PackagePath": "staticwebassets/vendor/boxicons/css/transformations.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/fonts/boxicons.eot",
+      "PackagePath": "staticwebassets/vendor/boxicons/fonts/boxicons.eot"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/fonts/boxicons.svg",
+      "PackagePath": "staticwebassets/vendor/boxicons/fonts/boxicons.svg"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/fonts/boxicons.ttf",
+      "PackagePath": "staticwebassets/vendor/boxicons/fonts/boxicons.ttf"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/fonts/boxicons.woff",
+      "PackagePath": "staticwebassets/vendor/boxicons/fonts/boxicons.woff"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/boxicons/fonts/boxicons.woff2",
+      "PackagePath": "staticwebassets/vendor/boxicons/fonts/boxicons.woff2"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/glightbox/css/glightbox.css",
+      "PackagePath": "staticwebassets/vendor/glightbox/css/glightbox.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/glightbox/css/glightbox.min.css",
+      "PackagePath": "staticwebassets/vendor/glightbox/css/glightbox.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/glightbox/js/glightbox.js",
+      "PackagePath": "staticwebassets/vendor/glightbox/js/glightbox.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/glightbox/js/glightbox.min.js",
+      "PackagePath": "staticwebassets/vendor/glightbox/js/glightbox.min.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/isotope-layout/isotope.pkgd.js",
+      "PackagePath": "staticwebassets/vendor/isotope-layout/isotope.pkgd.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/isotope-layout/isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets/vendor/isotope-layout/isotope.pkgd.min.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/php-email-form/validate.js",
+      "PackagePath": "staticwebassets/vendor/php-email-form/validate.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/purecounter/purecounter_vanilla(1).js",
+      "PackagePath": "staticwebassets/vendor/purecounter/purecounter_vanilla(1).js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/purecounter/purecounter_vanilla.js",
+      "PackagePath": "staticwebassets/vendor/purecounter/purecounter_vanilla.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/purecounter/purecounter_vanilla.js(1).map",
+      "PackagePath": "staticwebassets/vendor/purecounter/purecounter_vanilla.js(1).map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/purecounter/purecounter_vanilla.js.map",
+      "PackagePath": "staticwebassets/vendor/purecounter/purecounter_vanilla.js.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/swiper/swiper-bundle.min(1).css",
+      "PackagePath": "staticwebassets/vendor/swiper/swiper-bundle.min(1).css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/swiper/swiper-bundle.min(1).js",
+      "PackagePath": "staticwebassets/vendor/swiper/swiper-bundle.min(1).js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/swiper/swiper-bundle.min.css",
+      "PackagePath": "staticwebassets/vendor/swiper/swiper-bundle.min.css"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/swiper/swiper-bundle.min.js",
+      "PackagePath": "staticwebassets/vendor/swiper/swiper-bundle.min.js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/swiper/swiper-bundle.min.js(1).map",
+      "PackagePath": "staticwebassets/vendor/swiper/swiper-bundle.min.js(1).map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/swiper/swiper-bundle.min.js.map",
+      "PackagePath": "staticwebassets/vendor/swiper/swiper-bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/waypoints/noframework.waypoints(1).js",
+      "PackagePath": "staticwebassets/vendor/waypoints/noframework.waypoints(1).js"
+    },
+    {
+      "Id": "/Users/loantruong/Documents/A/JobMatch/wwwroot/vendor/waypoints/noframework.waypoints.js",
+      "PackagePath": "staticwebassets/vendor/waypoints/noframework.waypoints.js"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.JobMatch.Microsoft.AspNetCore.StaticWebAssets.props",

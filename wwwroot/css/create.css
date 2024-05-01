@@ -1,70 +1,49 @@
-/* Base styles for the form and its container */
-.row {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.col-md-4 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    background-color: white;
-}
-
-form {
-    width: 100%;
-}
-
-/* Styling for form elements */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
-input[type="text"],
-input[type="submit"],
-select {
+.control-label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
     width: 100%;
-    padding: 8px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in the element's width and height */
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/* Validation message styling */
 .text-danger {
-    color: #a94442; /* Bootstrap default */
-    font-size: 0.85rem;
+    color: #dc3545;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .col-md-4 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
-/* Link styling */
-a {
-    color: #007BFF;
-    text-decoration: none;
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
 }
 
-a:hover {
-    text-decoration: underline;
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 5px 18.5px;
+    border-radius: 5px;
+}
+
+.btn-secondary:hover {
+    background-color: #495057;
 }

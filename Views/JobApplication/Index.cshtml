@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    <link rel="stylesheet" href="~/css/index.css" />
 }
 @if (User.IsInRole("Job Seeker"))
 {
@@ -70,22 +71,22 @@ else if (User.IsInRole("Admin"))
                 @if (User.IsInRole("Admin"))
                 {
                     @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>  *@
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                    <a class="details-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
                     <form asp-controller="JobApplication" asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Are you sure you want to delete for this application?')">
-                        <input type="submit" value="Delete" />
+                        <input type="submit" class="delete-button" value="Delete" />
                     </form>
                 }else if (User.IsInRole("Job Seeker"))
                 {
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="edit-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="details-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
                     <form asp-controller="JobApplication" asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Are you sure you want to delete for this application?')">
-                        <input type="submit" value="Delete" />
+                        <input type="submit" class="delete-button" value="Delete" />
                     </form>
                 }else if (User.IsInRole("Employer"))
                 {
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                    <a asp-action="Accept" asp-route-id="@item?.Id">Accept</a> 
-                    <a asp-action="Decline" asp-route-id="@item?.Id">Decline</a>  
+                    <a class="details-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="accept" asp-action="Accept" asp-route-id="@item?.Id">Accept</a> 
+                    <a class="decline" asp-action="Decline" asp-route-id="@item?.Id">Decline</a>  
                 }
             </td>
         </tr>

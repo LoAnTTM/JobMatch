@@ -2,12 +2,13 @@
 
 @{
     ViewData["Title"] = "Index";
+    <link rel = "stylesheet" href = "~/css/index.css" />
 }
 
 <h1>Job list</h1>
 @if (User.IsInRole("Employer"))
 {
-    <p>
+    <p class="create-button">
         <a asp-action="Create">Create New</a>
     </p>
 }
@@ -71,22 +72,26 @@
             <td>
                 @if (User.IsInRole("Admin"))
                 {
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
-                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this job?')">
-                        <input type="submit" value="Delete" />
-                    </form>
+                <a class="details-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <form asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this?')">
+                    <input type="submit" class="delete-button" value="Delete" />
+                </form>
                 }else if (User.IsInRole("Employer"))
                 {
                     
                 }
                 else if (User.IsInRole("Job Seeker"))
                 {
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                    <a asp-action="ApplyJob" asp-route-id="@item.Id">Apply</a>
+                <a class="details-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                       <form asp-action="ApplyJob" asp-route-id="@item.Id" method="get">
+                    <input type="submit" class="apply-button" value="Apply" />
+                </form>
                 } else 
                 {
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                    <a asp-action="ApplyJob" asp-route-id="@item.Id">Apply</a>
+                <a class="details-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                      <form asp-action="ApplyJob" asp-route-id="@item.Id" method="get">
+                    <input type="submit" class="apply-button" value="Apply" />
+                </form>
                 }
             </td>
         </tr>

@@ -1,8 +1,388 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    <link rel="stylesheet" href="~/css/indexhome.css" />
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+    
+    
+    
+      <!-- Vendor JS Files -->
+    <script src="~/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/vendor/aos/aos.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/js/main.js"></script>
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+</head>
+
+
+<body>
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out">
+      <link href="~/img/hero-bg.jpg" rel="">
+      <h1>Welcome to <span>JobMatch</span></h1>
+      <h2>Unlock Your Potential with JobMatch: Where Careers Find Their Perfect Match</h2>
+      <div class="d-flex">
+        <a href=""  class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+  </section>
+</body>
+<main id="main">
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-task"></i></div>
+              <h4 class="title"><a href="">Published Recruitment</a></h4>
+                <p class="description">
+                Explore a wide range of published job openings from various industries and sectors, 
+                updated regularly to provide you with the latest opportunities. 
+                </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Candidate Profile</a></h4>
+              <p class="description">
+                Find enticing job listings offering competitive salaries, growth opportunities, and attractive benefits packages tailored to your career goals.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-like"></i></div>
+              <h4 class="title"><a href="">Attractive Job</a></h4>
+              <p class="description">
+                    Explore exciting job opportunities with top employers, featuring rewarding roles and perks that align with your skills and interests.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Top Employers</a></h4>
+              <p class="description">
+                    Discover career opportunities with industry-leading companies recognized for their positive work culture, career development programs, and community involvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>About FPTJOBMATCH</h2>
+            <h3>Find Out More <span>About Us</span></h3>
+            <p>Discover the innovative features and benefits of FPTJOBMATCH, <br>
+            revolutionizing the job search and recruitment process.</p>
+        </div>
+
+        <div class="row">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="~/img/logo.png" class="img-fluid" alt="FPTJOBMATCH Logo">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>Empowering Your Career Journey</h3>
+            <p class="fst-italic">
+            FPTJOBMATCH is committed to providing a seamless platform for both job seekers and employers, facilitating meaningful connections and opportunities.
+            </p>
+            <ul>
+            <li>
+                <i class="bx bx-store-alt"></i>
+                <div>
+                <h5>Streamlined Job Search</h5>
+                <p>Explore a vast array of job opportunities tailored to your skills and preferences, with intuitive search functionalities.</p>
+                </div>
+            </li>
+            <li>
+                <i class="bx bx-images"></i>
+                <div>
+                <h5>Interactive Platform</h5>
+                <p>Engage with employers and recruiters through our interactive messaging system, fostering seamless communication and collaboration.</p>
+                </div>
+            </li>
+            </ul>
+            <p>
+            FPTJOBMATCH is dedicated to optimizing your job search experience, providing comprehensive resources and support every step of the way. Join us in shaping the future of recruitment!
+            </p>
+        </div>
+        </div>
+    </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people"></i>     
+              <span class="purecounter">540.000+</span>
+              <h5>Reputable employer </h5>
+              <p>Employers come from all industries and are verified by JobMatch.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span class="purecounter">200.000+</span>
+              <h5>Leading enterprises</h5>
+              <p>JobMatch is trusted and supported by many leading businesses.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span class="purecounter">100.000+</span>
+              <h5>Diverse career</h5>
+              <p>JobMatch offers a diverse range of career opportunities.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span class="purecounter">1.000.000+</span>
+              <h5>Diverse user community</h5>
+              <p>Diverse user community of over one million users using JobMatch.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container" data-aos="zoom-in">
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/img/clients/client-1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/img/clients/client-2.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <h3>Check our <span>Services</span></h3>
+          <p>A sophisticated platform revolutionizing job posting and hiring.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <img src="~/img/service.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">For Job Seekers</a></h4>
+              <p>Find relevant job opportunities and apply with ease using our intuitive tools tailored for job seekers. 
+                With FPTJobMatch, you can discover new career paths, connect with employers, and land your dream job.</p>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">For Employers</a></h4>
+              <p>FPTJobMatch offers a streamlined and efficient solution for employers to create and manage job listings effortlessly. 
+                With our advanced tools and features, you can reach qualified candidates and streamline the hiring process.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <h3><span>Contact Us</span></h3>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>658 Ngo Quyen, An Hai Bac, Da Nang</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>jobmatch@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+0901 234 567</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-6 ">
+            @* <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/place/Greenwich+Vi%E1%BB%87t+Nam/@16.0881292,108.2332744,14.98z/data=!4m6!3m5!1s0x31421827a3c439f5:0xdec2fb897aa16a90!8m2!3d16.0822287!4d108.2359371!16s%2Fg%2F1hhhhhfyk?utm_campaign=tt-sps&coh=209934&entry=tts;" allowfullscreen></iframe> *@
+            <img src="~/img/map.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>JOBMATCH<span>.</span></h3>
+            <p>
+              658 Ngo Quyen<br>
+              An Hai Bac, Da Nang<br><br>
+              <strong>Phone:</strong> +0901 234 567<br>
+              <strong>Email:</strong> jobmatch@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->

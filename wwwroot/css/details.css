@@ -1,75 +1,72 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1 {
+    font-family: Georgia;
 }
 
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Details Styles */
-.details-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.details-container h1 {
-    font-size: 24px;
+.row {
+    margin-top: 20px;
     margin-bottom: 20px;
+    font-family: Georgia;
 }
-
-.details-container h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.details-container hr {
-    margin-bottom: 20px;
-}
-
-.details-container .row {
-    margin-bottom: 20px;
-}
-
-.details-container .row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.details-container dt {
-    float: left;
-    width: 30%;
-    font-weight: bold;
-}
-
-.details-container dd {
-    float: left;
-    width: 70%;
-}
-
-.details-container a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
+.btn-secondary {
+    margin-top: 10px;
+    background-color: #7c8084;
     color: #fff;
-    text-decoration: none;
+    border: none;
+    padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: Georgia;
 }
 
-.details-container a:hover {
-    background-color: #0056b3;
+.btn-secondary:hover {
+    background-color: #3b4044;
+}
+
+
+.action-links {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    padding: 5px 18.5px;
+    background-color: rgb(245, 245, 208);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: Georgia;
+}
+
+.action-links:hover {
+    background-color: #faf086;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+/* CSS cho các liên kết */
+.accept,
+.decline {
+    display: inline-block; /* Để các liên kết hiển thị trên cùng một dòng */
+    padding: 5px 10px; /* Kích thước của phần padding */
+    margin-right: 10px; /* Khoảng cách giữa các liên kết */
+    color: white; /* Màu văn bản */
+    text-decoration: none; /* Loại bỏ gạch chân dưới văn bản */
+    border-radius: 5px; /* Để bo tròn các góc của liên kết */
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay khi rê chuột qua */
+    font-family: Georgia;
+}
+
+/* CSS cho nút Accept */
+.accept {
+    background-color: green; /* Màu nền cho nút Accept */
+}
+
+/* CSS cho nút Decline */
+.decline {
+    background-color: red; /* Màu nền cho nút Decline */
+}
+
+/* CSS cho khi rê chuột qua các liên kết */
+.accept:hover,
+.decline:hover {
+    opacity: 0.8; /* Điều chỉnh độ trong suốt khi rê chuột qua */
 }

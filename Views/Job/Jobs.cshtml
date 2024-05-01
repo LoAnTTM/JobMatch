@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    <link rel="stylesheet" href="~/css/index.css" />
 }
 
 <h1>My Job list</h1>
@@ -57,10 +58,10 @@
                 @Html.DisplayFor(modelItem => item.Deadline)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a class="edit-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="details-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
                 <form asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('Are you sure you want to delete for job?')">
-                    <input type="submit" value="Delete" />
+                    <input type="submit" class="delete-button" value="Delete" />
                 </form>
             </td>
         </tr>
